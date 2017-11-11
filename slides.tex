@@ -8,6 +8,9 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
 
 \lstdefinestyle{CStyle}{
 	breakatwhitespace=false,         
@@ -52,24 +55,66 @@
 
  % % % Here you go  % % % 
 
-\section{TESTs}
+\section{Inleiding}
 
 \begin{frame}
-\frametitle{Inleidende frame}
-Inleidende lolololol.
+\frametitle{Inleiding}
+\textbf{\textit{Simulated annealing}} \\~\\
+Een manier om dichtbij optimale oplossing te geven voor een combinatorisch optimalisatie probleem.\\~\\
+\pause
+Gebaseerd op het afkoelen van metalen. 
 \end{frame}
 
-\section[Korte titel]{Lange hoofdstuktitel}
+\section[SA algemeen]{De algemene vorm van simulated annealing}
 
 \begin{frame}
-\frametitle{Frame-titel}
-Tekst.
+\frametitle{Gegevens}
+3 benodigdheden voor SA:
+
+\begin{enumerate}
+	\item \textbf{$\mathscr{R}$} : Een verzameling configuraties / combinaties
+	\item \textbf{$C: \mathscr{R} \rightarrow \mathbb{R}$}: Een functie die de `kost' van een configuratie weergeeft
+	\item \textbf{$\mathscr{N}: \mathscr{R} \rightarrow 2^\mathscr{R}$} : Een functie die de `neighborhood' van een configuratie weergeeft, met $\mathscr{N}(i) \subseteq \mathscr{R}$ \\~\\
+	Een simpele transitie is nodig waaruit indien toegepast op een configuratie i, alle $\mathscr{N}(i)$ hieruit kunnen volgen
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Algoritme SA}
+	$\triangleright$ Iteratief algoritme waarin $i \in \mathscr{R}$ gegeven is bij de initialisatie. \\~\\~\\ \pause
+	$\rightarrow$ Er wordt een neighbor $j \in \mathscr{N}(i)$ genomen \\~\\ \pause
+	$\rightarrow$ De kans dat we met $j$ verdergaan is min\{$1,e^{\frac{-(C(j)-C(i))}{c}}$\} met $c$ een getal die daalt tijdens de uitvoering.\\~\\
+	\pause
+	Kans daalt als:
+	\begin{itemize}
+		\item[$\bullet$] $C(j)-C(i)$ groot of dus j veel zwaarder
+		
+		\item[$\bullet$] $c$ kleiner wordt of dus tijd vordert
+		
+		
+	\end{itemize}
+	\pause
+	~\\Kans 1 als $C(j) \leqslant C(i)$
+	
+	
+\end{frame}
+
+\section[simpeler?]{Waarom niet simpeler}
+
+\begin{frame}
+	\frametitle{Waarom niet simpeler?}
+	Wat indien men met $j$ verdergaat als $C(j) \leq C(i)$?\\~\\
+	\pause
+	Stel $i \in \mathscr{R}$ en $\forall j \in \mathscr{N}(i): C(j) \geqslant C(i)$ \\($i$ heeft kleinste kost van al zijn neighbors) \\
+	$\Rightarrow$ je zit vast in $\mathscr{N}(j)$ \\~\\
+	\pause
+	SA `verplicht' om te veranderen in begin en zo niet vast te zitten
 \end{frame}
 
 \section{Besluit}
 \begin{frame}
-\frametitle{Afsluitende frame}
-Afsluitende tekst.
+\frametitle{Besluit}
+SA blijft relatief simpel en vermijd de valkuil van de simpelere methode.
 \end{frame}
 
 \end{document}
