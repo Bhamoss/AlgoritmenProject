@@ -1,0 +1,75 @@
+\documentclass
+   [kulak] % options: kul/kulak, handout (altijd kul of kulak optioneel kan handout bijgevoegd worden)
+   {kulakbeamer}
+
+\usepackage[dutch]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphicx}
+
+\lstdefinestyle{CStyle}{
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2,
+	language=C,
+	morekeywords={parallel, spawn, sync, new}
+}
+
+\title[Simulated annealing]{Job shop scheduling by simulated annealing}
+\author[T. Bamelis \& M. Jonckheere]{Thomas Bamelis \& Michiel Jonckheere} 
+\institute[Kulak]{KU Leuven Kulak}
+\date{Academiejaar 2017-2018}
+
+% Overzicht bij het begin van elk hoofdstuk 
+\AtBeginSection[]{\only<beamer>{\addtocounter{framenumber}{-1}
+	\begin{outlineframe}[Overzicht]
+		\tableofcontents[currentsection]
+	\end{outlineframe}}
+	}
+
+
+\defbeamertemplate{description item}{align left}{\insertdescriptionitem\hfill}
+
+
+\begin{document}
+
+\begin{titleframe}
+\titlepage
+\end{titleframe}
+
+\begin{outlineframe}[Overzicht]
+\tableofcontents
+\end{outlineframe}
+
+ % % % Here you go  % % % 
+
+\section{Inleiding}
+
+\begin{frame}
+\frametitle{Inleidende frame}
+Inleidende lolololol.
+\end{frame}
+
+\section[Korte titel]{Lange hoofdstuktitel}
+
+\begin{frame}
+\frametitle{Frame-titel}
+Tekst.
+\end{frame}
+
+\section{Besluit}
+\begin{frame}
+\frametitle{Afsluitende frame}
+Afsluitende tekst.
+\end{frame}
+
+\end{document}

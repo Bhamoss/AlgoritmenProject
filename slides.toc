@@ -1,0 +1,4 @@
+\select@language {dutch}
+\beamer@sectionintoc {1}{Inleiding}{3}{0}{1}
+\beamer@sectionintoc {2}{Lange hoofdstuktitel}{5}{0}{2}
+\beamer@sectionintoc {3}{Besluit}{7}{0}{3}
