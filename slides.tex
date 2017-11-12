@@ -12,6 +12,8 @@
 \usepackage{amssymb}
 \usepackage{mathrsfs}
 
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
 \lstdefinestyle{CStyle}{
 	breakatwhitespace=false,         
 	breaklines=true,                 
@@ -143,11 +145,57 @@ Gebaseerd op het afkoelen van metalen.
 \begin{frame}
 	\frametitle{Kost functie}
 	%TODO Hier op dezelfde manier als hierboven de 2 gerichte grafen d schrijven en wat ze zijn in mensentaal en dat ze dezelfde lengte hebben
-	Hier op dezel
-	%TODO Zeggen dat de kostfunctie via labelingsalgoritme, normaal is dit het korste pad als alle bogen gewicht -1 krijgen
+	We definiëren volgende twee grafen:\\
+	\begin{enumerate}
+		\item $D_i = (V, A \cup E_i)$, met $E_i = \{(v, w) | \{v, w\} \in E$ en 		$\pi_{ik}(v) = w$, voor enkele $k \in \mathscr(M)\}$\\
+		\item $\bar{D_i} = (V, A \cup \bar{E_i})$, met $\bar{E_i} = \{(v, w) | \{v, w\} \in E$ en $\pi_{ik}^l(v) = w$, voor enkele $k \in \mathscr(M), 1 \le l \le m_k -1\}$
+	\end{enumerate}
+	~\\
+	
+	$\bar{D_i}$ is een disjuncte graaf met bogen uit $E$, waarvan de oriëntatie bepaald wordt door $\Pi_i$.\\ ~\\
+
+	$D_i$ is $\bar{D_i}$ waarvan de bogen uit $\bar{E_i}$ die opeenvolgende operaties zijn van dezelfde machine.
+	
+	
 \end{frame}
 
-%TODO Zelfde voor neigbourhood structures
+\begin{frame}
+\frametitle{Kost functie}
+	%TODO Zeggen dat de kostfunctie via labelingsalgoritme, normaal is dit het korste pad als alle bogen gewicht -1 krijgen
+	Het langste pad van beide grafen zijn even lang.\\~\\
+	
+	Kost van configuratie $i$ vinden we door het langste pad van $0$ naar $N + 1$ te zoeken in $D_i$ $\rightarrow$ m.b.v. \textit{labeling algoritme}\\~\\
+	
+	Aantal bogen: $|A| + |E_i| = (N + n) + (N - m)$ \\
+	\tab $\Rightarrow$ $O(N)$
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Neighborhood Structuur}
+	Keuze transitie:\\
+	\begin{enumerate}
+		\item $v$ en $w$ zijn opeenvolgende operaties op een machine $k$\\
+		\item $(v, w)\in E_i$ is een kritieke boog\\ 
+	\end{enumerate}
+	Daarna $v$ en $w$ wisselen in uitvoering.\\
+	\tab $\Rightarrow$ $(u, v)$ en $(w, x)$ wordt $(u, w)$ en $(v, x)$\\~\\
+	Enkele transities dus zeker al uitsluiten:\\
+	\begin{enumerate}
+		\item De kost verlaagt niet na de transitie\\
+		\item De transitie resulteert in een cyclic graph\\
+	\end{enumerate}
+	~\\
+	We besluiten dus: $\mathscr{N}(i) < \Sigma_{k=1}^m (m_k - 1) = N - m$
+\end{frame}
+
+\begin{frame}
+\frametitle{Convergentie}
+	%TODO volgens mij zal het toch niet al teveel zeggen als we hier die lemma's en stelling zetten. Lemma 2 kunnen we wel eens aanhalen in vorige slide.
+\end{frame}
+
+%TODO Over section 4 moeten we ook niet echt iets zeggen denk ik? ofwel eens aanhalen dat SA toch wel beter werkt als het gaat om grote problemen, en die andere algoritmes eens aanhalen?
 
 \section{Besluit}
 \begin{frame}
