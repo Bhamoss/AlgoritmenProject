@@ -83,7 +83,7 @@ Gebaseerd op het afkoelen van metalen.
 	\frametitle{Algoritme SA}
 	$\triangleright$ Iteratief algoritme waarin $i \in \mathscr{R}$ gegeven is bij de initialisatie. \\~\\~\\ \pause
 	$\rightarrow$ Er wordt een neighbor $j \in \mathscr{N}(i)$ genomen \\~\\ \pause
-	$\rightarrow$ De kans dat we met $j$ verdergaan is min\{$1,e^{\frac{-(C(j)-C(i))}{c}}$\} met $c$ een getal die daalt tijdens de uitvoering.\\~\\
+	$\rightarrow$ De kans dat we met $j$ verdergaan is min\{$1,e^{\frac{-(C(j)-C(i))}{c}}$\} met $c$ een getal die daalt tijdens de uitvoering (\textit{cfr. temperatuur}).\\~\\
 	\pause
 	Kans daalt als:
 	\begin{itemize}
@@ -100,8 +100,9 @@ Gebaseerd op het afkoelen van metalen.
 \end{frame}
 
 \begin{frame}
-	\frametitle{Afname c en aantal iteraties}
-	$c\textsubscript{k+1} = \frac{c\textsubscript{k}}{1 + [c\textsubscript{k}\cdot \ln(1 + \delta)/3\cdot \sigma\textsubscript{k}]}$ \\~\\ met $\sigma\textsubscript{k}$ de standaard afwijking van de kost van de configuraties van de k'de iteratie
+	\frametitle{c en aantal iteraties}
+	Kies voor c begin waarde $\chi\textsubscript{0}$, eindwaard $\epsilon\textsubscript{s}$ en $\delta$
+	$c\textsubscript{k+1} = \frac{c\textsubscript{k}}{1 + [c\textsubscript{k}\cdot \ln(1 + \delta)/3\cdot \sigma\textsubscript{k}]}$ \\~\\ met $\sigma\textsubscript{k}$ de standaard afwijking van de kost van de configuraties van de k'de iteratie \\~\\\pause$\rightarrow$ $\delta$ klein gekozen $\Rightarrow$ trage `kwalitatieve' afname c 
 	\\~\\\pause
 	Lengte ?van de k'de markovketen?:\\
 	$L\textsubscript{k} = \displaystyle \max_{i \in \mathscr{R}}\{|\mathscr{N}(i)|\}$
@@ -111,7 +112,8 @@ Gebaseerd op het afkoelen van metalen.
 	\frametitle{Kwaliteit algoritme}
 	
 	$\triangleright$ Indien $\delta$ kleiner dan 0,1 gekozen wordt\\
-	is de eindconfiguratie binnen 2\% van het globaal minimum.
+	is de eindconfiguratie binnen 2\% van het globaal minimum. \\~\\
+	Tijdscomplexiteit $= \mathscr{\theta}(\tau L\ln(|\mathscr{R}|))$ met $\tau$ de tijd om een nieuwe transitie door te voeren.
 	
 \end{frame}
 
