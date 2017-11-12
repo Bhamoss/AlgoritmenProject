@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350) (preloaded format=pdflatex 2017.9.26)  12 NOV 2017 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350) (preloaded format=pdflatex 2017.9.26)  12 NOV 2017 17:16
 entering extended mode
 **./slides.tex
 (slides.tex
@@ -1198,7 +1198,7 @@ Overfull \hbox (2.32138pt too wide) in paragraph at lines 50--50
 []|  $[]$[]  
  []
 
-<kulakTitlepage.pdf, id=33, 364.19562pt x 273.14648pt>
+<kulakTitlepage.pdf, id=38, 364.19562pt x 273.14648pt>
 File: kulakTitlepage.pdf Graphic file (type pdf)
 
 <use kulakTitlepage.pdf>
@@ -1208,7 +1208,7 @@ Package pdftex.def Info: kulakTitlepage.pdf used on input line 50.
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/latexStuff/texmf/tex/l
 atex/kulak/kulakTitlepage.pdf>] (slides.toc)
-<kulakOutline.pdf, id=100, 722.7pt x 542.025pt>
+<kulakOutline.pdf, id=106, 722.7pt x 542.025pt>
 File: kulakOutline.pdf Graphic file (type pdf)
  <use kulakOutline.pdf>
 Package pdftex.def Info: kulakOutline.pdf used on input line 54.
@@ -1230,7 +1230,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 66.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 66.
- <kulakBackground.pdf, id=151, 722.7pt x 542.025pt>
+ <kulakBackground.pdf, id=159, 722.7pt x 542.025pt>
 File: kulakBackground.pdf Graphic file (type pdf)
 
 <use kulakBackground.pdf>
@@ -1370,9 +1370,47 @@ Package pdftex.def Info: kulakOutline.pdf used on input line 132.
 ]
 File: kulakBackground.pdf Graphic file (type pdf)
  <use kulakBackground.pdf>
-Package pdftex.def Info: kulakBackground.pdf used on input line 136.
+Package pdftex.def Info: kulakBackground.pdf used on input line 141.
 (pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
  [22
+
+]
+File: kulakBackground.pdf Graphic file (type pdf)
+
+<use kulakBackground.pdf>
+Package pdftex.def Info: kulakBackground.pdf used on input line 141.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [23
+
+]
+File: kulakBackground.pdf Graphic file (type pdf)
+ <use kulakBackground.pdf>
+Package pdftex.def Info: kulakBackground.pdf used on input line 141.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [24
+
+]
+File: kulakBackground.pdf Graphic file (type pdf)
+
+<use kulakBackground.pdf>
+Package pdftex.def Info: kulakBackground.pdf used on input line 148.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [25
+
+] (slides.toc)
+File: kulakOutline.pdf Graphic file (type pdf)
+ <use kulakOutline.pdf>
+Package pdftex.def Info: kulakOutline.pdf used on input line 152.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [26
+
+]
+File: kulakBackground.pdf Graphic file (type pdf)
+
+<use kulakBackground.pdf>
+Package pdftex.def Info: kulakBackground.pdf used on input line 156.
+(pdftex.def)             Requested size: 364.1942pt x 273.15392pt.
+ [27
 
 ]
 \tf@nav=\write6
@@ -1384,36 +1422,36 @@ Package pdftex.def Info: kulakBackground.pdf used on input line 136.
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
  (slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: 05C05120DA19F366F3A671646A6B2A6F;220.
+(rerunfilecheck)             Checksum: D9770ECEE02D14B51DD209B116312F99;291.
  ) 
 Here is how much of TeX's memory you used:
- 19386 strings out of 493323
- 347571 string characters out of 3145528
+ 19409 strings out of 493323
+ 347780 string characters out of 3145528
  436210 words of memory out of 3000000
- 22405 multiletter control sequences out of 15000+200000
+ 22415 multiletter control sequences out of 15000+200000
  39423 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,57p,798b,598s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/MiKTeX2.9/fonts/enc/dvips/base/8r.enc}<D:/MiKTeX2.9/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:
-/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/MiKTeX2.9/fonts/type1/
-public/amsfonts/cm/cmss8.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/MiKTeX2.9/font
-s/type1/public/amsfonts/cm/cmsy8.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts/
-symbols/msam10.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-><D:/MiKTeX2.9/fonts/type1/public/rsfs/rsfs10.pfb><D:/MiKTeX2.9/fonts/type1/urw
-/helvetic/uhvb8a.pfb><D:/MiKTeX2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><D:/MiK
-TeX2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/MiKTeX2.9/fonts/type1/urw/helvet
-ic/uhvro8a.pfb>
-Output written on slides.pdf (22 pages, 742656 bytes).
+sfonts/cm/cmex10.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D
+:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/MiKTeX2.9/fonts/type1/
+public/amsfonts/cm/cmss10.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmss
+8.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/MiKTeX2.9/fon
+ts/type1/public/amsfonts/cm/cmsy6.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb><D:/MiKTeX2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/
+MiKTeX2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/MiKTeX2.9/fonts/ty
+pe1/public/rsfs/rsfs10.pfb><D:/MiKTeX2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D
+:/MiKTeX2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><D:/MiKTeX2.9/fonts/type1/urw/
+helvetic/uhvr8a.pfb><D:/MiKTeX2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on slides.pdf (27 pages, 771400 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 510 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 
