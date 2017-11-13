@@ -162,10 +162,12 @@ Gebaseerd op het afkoelen van metalen.
 \begin{frame}
 \frametitle{Kost functie}
 	%TODO Zeggen dat de kostfunctie via labelingsalgoritme, normaal is dit het korste pad als alle bogen gewicht -1 krijgen
-	Het langste pad van beide grafen zijn even lang.\\~\\
-	
-	Kost van configuratie $i$ vinden we door het langste pad van $0$ naar $N + 1$ te zoeken in $D_i$ $\rightarrow$ m.b.v. \textit{labeling algoritme}\\~\\
-	
+	Het langste pad van beide grafen zijn even lang. (Overige paden zijn korter of afkorting van een pad)\\~\\
+	\pause
+	Kost van configuratie $i$ vinden we door het langste pad van $0$ naar $N + 1$ te zoeken in $D_i$ $\rightarrow$ m.b.v. \textit{labeling algoritme}\\\tab $\rightarrow$ 
+	kortste pad algoritme met gewicht boog = -1
+	\\~\\
+	\pause
 	Aantal bogen: $|A| + |E_i| = (N + n) + (N - m)$ \\
 	\tab $\Rightarrow$ $O(N)$
 
@@ -192,10 +194,8 @@ Gebaseerd op het afkoelen van metalen.
 
 \begin{frame}
 \frametitle{Convergentie}
-	%TODO volgens mij zal het toch niet al teveel zeggen als we hier die lemma's en stelling zetten. Lemma 2 kunnen we wel eens aanhalen in vorige slide.
+	Via een bewijs kan aangetoond worden dat voor iedere begin configuratie $i$ een eindig aantal transities bestaat om een globaal minimale configuratie te bereiken.
 \end{frame}
-
-%TODO Over section 4 moeten we ook niet echt iets zeggen denk ik? ofwel eens aanhalen dat SA toch wel beter werkt als het gaat om grote problemen, en die andere algoritmes eens aanhalen?
 
 \section{Besluit}
 \begin{frame}
