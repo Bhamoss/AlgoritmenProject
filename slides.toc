@@ -3,4 +3,4 @@
 \beamer@sectionintoc {2}{De algemene vorm van simulated annealing}{6}{0}{2}
 \beamer@sectionintoc {3}{Waarom niet simpeler}{17}{0}{3}
 \beamer@sectionintoc {4}{SA toegepast op job shop scheduling}{21}{0}{4}
-\beamer@sectionintoc {5}{Besluit}{31}{0}{5}
+\beamer@sectionintoc {5}{Besluit}{33}{0}{5}

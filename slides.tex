@@ -126,7 +126,7 @@ Gebaseerd op het afkoelen van metalen.
 	Wat indien men met $j$ verdergaat als $C(j) \leq C(i)$?\\~\\
 	\pause
 	Stel $i \in \mathscr{R}$ en $\forall j \in \mathscr{N}(i): C(j) \geqslant C(i)$ \\($i$ heeft kleinste kost van al zijn neighbors) \\
-	$\Rightarrow$ je zit vast in $\mathscr{N}(j)$ \\~\\
+	$\Rightarrow$ je zit vast in $\mathscr{N}(i)$ \\~\\
 	\pause
 	SA `verplicht' om te veranderen in begin en zo niet vast te zitten
 \end{frame}
@@ -138,36 +138,47 @@ Gebaseerd op het afkoelen van metalen.
 	We geven hier de gegevens die SA nodig heeft door voor ons probleem.\pause 
 	~\\~\\  \textbf{\textit{Configuraties}}: \\ ~\\
 	De configuratie $i$ wordt weergegeven door $\Pi\textsubscript{i}$ met \\ $\Pi\textsubscript{i} = \{\pi\textsubscript{i1}, ... ,\pi\textsubscript{im}\}$
-	met $\pi\textsubscript{ik}$ de volgorde waarin de operaties op machine k worden uitgevoerd. \pause	~\\~\\ $\pi\textsubscript{ik}$ moet $m\textsubscript{k}$ operaties bevatten $\Rightarrow$ $\#\mathscr{R} = \prod\limits_{k=1}^m m\textsubscript{k}!$ met m aantal machines \\~\\ Als operatie v op machine k uitvoert, dan is $\pi\textsubscript{ik}(v)$ de operatie die na v op machine k uitvoert.
+	met $\pi\textsubscript{ik}$ de volgorde waarin de operaties op machine k worden uitgevoerd.
+	 \pause	~\\~\\ $\pi\textsubscript{ik}$ moet $m\textsubscript{k}$ operaties bevatten $\Rightarrow$ $\#\mathscr{R} = \prod\limits_{k=1}^m m\textsubscript{k}!$ met m aantal machines \\~\\ Als operatie v op machine k uitvoert, dan is $\pi\textsubscript{ik}(v)$ de operatie die na v op machine k uitvoert.\\
+	 $\pi_{ik}^l (v)$ is de $l$'de operatie na v.
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Kost functie}
-	%TODO Hier op dezelfde manier als hierboven de 2 gerichte grafen d schrijven en wat ze zijn in mensentaal en dat ze dezelfde lengte hebben
-	We definiëren volgende twee grafen:\\
+	Stel V de operaties en A de gerichte bogen 	
+	met $(v,w) \in A$, v en w in zelfde job en w voert direct na v uit. \\ (n jobs, m machines $\geqslant 2$ en N operaties)\\~\\ \pause
+	Definiëren twee grafen:
 	\begin{enumerate}
-		\item $D_i = (V, A \cup E_i)$, met $E_i = \{(v, w) | \{v, w\} \in E$ en 		$\pi_{ik}(v) = w$, voor enkele $k \in \mathscr(M)\}$\\
-		\item $\bar{D_i} = (V, A \cup \bar{E_i})$, met $\bar{E_i} = \{(v, w) | \{v, w\} \in E$ en $\pi_{ik}^l(v) = w$, voor enkele $k \in \mathscr(M), 1 \le l \le m_k -1\}$
+		\item $D_i = (V, A \cup E_i)$, met $E_i = \{(v, w) | \{v, w\} \in E$ en 		$\pi_{ik}(v) = w$, voor een $k \in \mathscr(M)\}$\\
+		$\rightarrow (v,w)$ in $E_i$ als w $direct$ na v uitvoert
+		\itemsep=2em
+		\item $\bar{D_i} = (V, A \cup \bar{E_i})$, met $\bar{E_i} = \{(v, w) | \{v, w\} \in E$ en $\pi_{ik}^l(v) = w$, voor een $k \in \mathscr(M)$ en een  $ 1 \le l \le m_k -1\}$\\
+		$\rightarrow (v,w)$ in $\bar{E_i}$ als w na v wordt uitgevoerd
 	\end{enumerate}
-	~\\
 	
-	$\bar{D_i}$ is een disjuncte graaf met bogen uit $E$, waarvan de oriëntatie bepaald wordt door $\Pi_i$.\\ ~\\
+	%
+%	$\bar{D_i}$ de graaf met de bogen uit $E$, %gericht naargelang de huidige configuratie i %($\Pi_i$).\\ 
 
-	$D_i$ is $\bar{D_i}$ waarvan de bogen uit $\bar{E_i}$ die opeenvolgende operaties zijn van dezelfde machine.
-	
+	%$D_i$ is $\bar{D_i}$ waarvan de bogen uit %$\bar{E_i}$ operaties (v,w) zijn met w die %direct na v uitvoert op $m_k$.
+	%
 	
 \end{frame}
 
 \begin{frame}
 \frametitle{Kost functie}
-	%TODO Zeggen dat de kostfunctie via labelingsalgoritme, normaal is dit het korste pad als alle bogen gewicht -1 krijgen
+	
 	Het langste pad van beide grafen zijn even lang. (Overige paden zijn korter of afkorting van een pad)\\~\\
 	\pause
-	Kost van configuratie $i$ vinden we door het langste pad van $0$ naar $N + 1$ te zoeken in $D_i$ $\rightarrow$ m.b.v. \textit{labeling algoritme}\\\tab $\rightarrow$ 
+	$\Rightarrow$ Kost van configuratie $i$ vinden we door het langste pad van beginknoop/bron $0$ naar eindknoop/put $N + 1$ te zoeken in $D_i$\\ $\rightarrow$  \textit{labeling algoritme}\\\tab $\rightarrow$ 
 	kortste pad algoritme met gewicht boog = -1
 	\\~\\
 	\pause
+	Dit heeft tijdscomplexiteit $\Theta(\# bogen)$\\
+	$|E_i| =$ operaties - \# beginknopen machines $= N - m$\\
+	$|A| =$ operaties - \# beginknopen jobs $= N + n$
+	\\ Want iedere knoop heeft precies 1 toekomende behalve 1e. \\
+	We vergeten uitknopen 0  en inknopen $N + 1$\\
 	Aantal bogen: $|A| + |E_i| = (N + n) + (N - m)$ \\
 	\tab $\Rightarrow$ $O(N)$
 
@@ -176,20 +187,19 @@ Gebaseerd op het afkoelen van metalen.
 
 \begin{frame}
 \frametitle{Neighborhood Structuur}
-	Keuze transitie:\\
+	Transitie:\\Neem bogen $v$ en $w$ zodat
 	\begin{enumerate}
 		\item $v$ en $w$ zijn opeenvolgende operaties op een machine $k$\\
 		\item $(v, w)\in E_i$ is een kritieke boog\\ 
 	\end{enumerate}
 	Daarna $v$ en $w$ wisselen in uitvoering.\\
-	\tab $\Rightarrow$ $(u, v)$ en $(w, x)$ wordt $(u, w)$ en $(v, x)$\\~\\
-	Enkele transities dus zeker al uitsluiten:\\
-	\begin{enumerate}
-		\item De kost verlaagt niet na de transitie\\
-		\item De transitie resulteert in een cyclic graph\\
-	\end{enumerate}
+	\tab $\Rightarrow$ $(u, v),(v,w),(w, x) \in E_i$ worden $(u, w),(w,v),(v, x) \in E_i$\\~\\
+\pause
+		 Geen kringen worden gecreëerd (kan bewezen worden) en omdat $(v,w) \in$ cruciaal pad zal de transitie effect hebben op de kost.
+	
 	~\\
-	We besluiten dus: $\mathscr{N}(i) < \Sigma_{k=1}^m (m_k - 1) = N - m$
+	$\mathscr{N}(i) =$ verzameling grafen bereikbaar uit i door omwisselen cruciale boog. Cruciaal pad $\subset E_i$ en $m_k - 1$ bogen per machine \\
+	$\Rightarrow |\mathscr{N}(i)| < |E_i| = \Sigma_{k=1}^m (m_k - 1) = N - m$
 \end{frame}
 
 \begin{frame}
@@ -200,7 +210,7 @@ Gebaseerd op het afkoelen van metalen.
 \section{Besluit}
 \begin{frame}
 \frametitle{Besluit}
-SA blijft relatief simpel en vermijd de valkuil van de simpelere methode.
+SA blijft relatief simpel, snel en goed en vermijd de valkuil van de simpelere methode.
 \end{frame}
 
 \end{document}
