@@ -1,3 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
 \select@language {dutch}
 \beamer@sectionintoc {1}{Inleiding}{3}{0}{1}
 \beamer@sectionintoc {2}{De algemene vorm van simulated annealing}{6}{0}{2}
